@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from lara.ng/two/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Aug 2017 19:34:06 GMT -->
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>Lara RP</title>
+	<meta name="description" content="Meet Lara, your automated directions assistant for Lagos.">
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="manifest" href="../manifest.json">
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Get Going">
+	<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+	<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<meta name="theme-color" content="#075E54">
+</head>
+<body>
+<div id="directions">
+	<div id="dir"></div>
+</div>
+<div class="container">
+	<div class="menubar">
+		<div class="menulogo">
+		</div>
+		<div class="menudetails">
+			<div class="menuname">
+				Lara
+			</div>
+			<div class="menustatus">
+				online
+			</div>
+		</div>
+		<div class="menuicon">
+		</div>
+		<a id="sharelara" href="whatsapp://send?text=Checkout http://lara.ng, an automated directions assistant">
+		<div class="shareicon">
+		</div>
+		</a>
+	</div>
+	<div class="chatbody">
+		<div id="chatarea" class="chatmessages">
+			<div class="messagediv">
+				<div class="laramessage">
+					Hello, I'm Lara.
+				</div>
+			</div>
+			<div class="messagediv">
+				<div class="laramessage">
+					Where can I help you get to today? (e.g., From Obalende, Lagos to Ajah Bus Stop)
+				</div>
+			</div>
+		</div>
+	<div class="chatbar">
+		<div class="chatinput">
+			<div id="emojies" class="emojies">
+			</div>
+			<div class="inputbox">
+				<input type='text' name='chatinput' id='chatinput' placeholder='Type your message' autofocus>
+			</div>
+			<div id="getloc" class="getlocation">
+			</div>
+		</div>
+		<div id="cbutton" class="sendicon">
+		</div>
+	</div>
+	</div>
+</div>
+<div id="menucont">
+	<div id="menu">
+		<div class="menuitem">
+			<b>Welcome to Lara</b>
+		</div>
+		<div id="bwt" class="menuitem">
+			Blue/White Theme
+		</div>
+		<div id="bgt" class="menuitem">
+			Blue/Grey Theme
+		</div>
+		<div id="ggt" class="menuitem">
+			Green/Gold Theme
+		</div>
+		<hr>
+		<div class="menuitem">
+			Access Lara quicker: Go to your browser's menu and click "Add to Home screen"
+		</div>
+	</div>
+</div>
+<div id="emojigroup" class="emoji-group">
+	<div class="row">
+		<div class='emoji smile' id='smile'></div>
+		<div class='emoji happy-1' id='happy-1'></div>
+		<div class='emoji happy-2' id='happy-2'></div>
+		<div class='emoji happy' id='happy'></div>
+	</div>
+	<div class="row">
+		<div class='emoji sad' id='sad'></div>
+		<div class='emoji unhappy' id='unhappy'></div>
+		<div class='emoji surprised' id='surprised'></div>
+		<div class='emoji quiet' id='quiet'></div>
+	</div>
+	<div class="row">
+		<div class='emoji in-love' id='in-love'></div>
+		<div class='emoji ninja' id='ninja'></div>
+		<div class='emoji suspicious' id='suspicious'></div>
+		<div class='emoji wtf' id='wtf'></div>
+	</div>
+</div>
+
+<script id="allstepsTemplate" type="text/x-dot-template">
+	<div id="stepcont" class="directionssteps">
+		<div class="instructimg transitStart"></div>
+		<div class="stepinstruct">
+			<br>
+		</div>
+	</div>
+	{{~it.Legs :value:index}}
+	{{? value.Vehicle.Type !== "Walk" }} <!-- if -->
+		{{? value.Vehicle.Type === "MiniBus" }} <!-- if -->
+		<b>Take a Danfo</b><br>
+	{{??}}<!-- else -->
+		<b>Take a {{=value.Vehicle.Type}}</b><br>
+	{{?}}<!-- if end -->
+			From: {{=value.Start.Name}}<br>
+			Heading Toward: {{=value.HeadSign}}<br>
+		Get Off at: {{=value.End.Name}}<br>
+	{{??}}
+		Walk To {{=value.End.Name}}<br>
+	<br>
+	{{?}}<!-- if end -->
+			<!-- stepcont -->
+	{{? value.Vehicle.Type !== "Walk" }} 
+		<b>Price</b>: <b>₦{{=value.Vehicle.Fare}}</b>
+			<br><br>
+	{{?}}<!-- if end -->
+	{{~}}
+	{{? it.Info.MinFare == it.Info.MaxFare }} 
+		Total Estimate: ₦{{=it.Info.MinFare}}<br>
+	{{??}}<!-- else -->
+		Total Estimate: ₦{{=it.Info.MinFare}} - {{=it.Info.MaxFare}}<br>
+	{{?}}<!-- if end -->
+	<br>Estimated Travel Time: {{=it.Info.TravelTime}}<br>
+</script>
+<script id="gmwTemplate" type="text/x-dot-template">
+	<img src="images/gmw.svg" height="20"><br>
+	<b>Departure Date</b>: {{=it.departure_date}}<br>
+	<b>Departure Point</b>: {{=it.departure_point}}<br>
+	<b>Drop Off Point</b>: {{=it.drop_off_point}}<br>
+	<b>Allow Smoking</b>: {{=it.allow_smoking}}<br>
+	<b>Accept Luggage</b>: {{=it.accept_luggage}}<br>
+	<b>Ac Available</b>: {{=it.ac_available}}<br>
+	<b>Ride Details</b>: {{=it.ride_details}}<br>
+	<b>Price</b>: ₦{{=it.price}}<br>
+	<b>Departure Time</b>: {{=it.departure_time}}<br>
+	<b>Car</b>: {{=it.car}}<br>
+	<b>Book your ride at</b>: <a href='https://{{=it.url}}' target="_blank">{{=it.url}}</a><br>
+</script>
+
+
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type='text/javascript' src='js/doT.min.js'></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	showicons();
+	ProcessShare();
+	ProcessReferral();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56806110-2', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+
+<!-- Mirrored from lara.ng/two/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Aug 2017 19:34:49 GMT -->
+</html>
