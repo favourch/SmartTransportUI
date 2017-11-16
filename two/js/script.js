@@ -520,7 +520,7 @@ function processQueryx() {
 		query = { ad: usersinput, lg: adlanguage, uid:userid };
 		gotlocation = false;
 		adlanguage="";
-		url = "https://conversecom.ipage.com/rpdev/setad"; 
+		url = "#"; 
 		setad = false;
 	}
 	$.ajax({
@@ -711,7 +711,7 @@ function ProcessReferral() {
 	}
 	if (rid.length==2) {
 		query = { rid: rid[1] };
-		var url = "https://conversecom.ipage.com/rpdev/referral";
+		var url = "htt";
 		$.ajax({
 			type: "GET",
 			url: url,
