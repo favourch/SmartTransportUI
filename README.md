@@ -3,4 +3,4 @@
 
 
 
-<br>Click here to go to the <b><a href="https://hacktivist123.github.io/SmartTransportUI">App</a></b></br>
+<br>Click here to go to the<a href="https://hacktivist123.github.io/SmartTransportUI" target"_blank">App</a></br>
