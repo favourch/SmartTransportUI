@@ -83,7 +83,7 @@ body,
     height: -o-calc(100% - 51px);
     height: calc(100% - 51px);
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .laramessage {
