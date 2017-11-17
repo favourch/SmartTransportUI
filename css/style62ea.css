@@ -4,7 +4,7 @@ body,
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Ubuntumono', 'monospace';
     overflow: hidden;
 }
 
@@ -60,7 +60,7 @@ body,
 .menuname,
 .menustatus {
     height: 45%;
-    color: #FFF;
+    color: blue;
 }
 
 .menuname {
@@ -87,7 +87,7 @@ body,
 }
 
 .laramessage {
-    background-color: #FFF;
+    background-color:grey;
     float: left;
     margin-left: 15px;
     margin-bottom: 10px;
@@ -168,7 +168,7 @@ body,
     margin: 5px 10px;
     width: 30px;
     text-align: center;
-    border: 2px solid orange;
+    border: 2px solid blue;
     position: absolute;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -515,7 +515,7 @@ img.yabaconimg {
 }
 
 .bgtsendicon {
-    background-image: url('../images/icons/sendbgt.svg') !important;
+    background-image: url('../images/icons/sendbwt.svg') !important;
 }
 
 .bgtmymessage::after {
