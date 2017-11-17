@@ -86,7 +86,7 @@ body,
     font-size: 16px;
 }
 
-.laramessage {
+.smartmessage {
     background-color: white;
     float: left;
     margin-left: 15px;
@@ -106,7 +106,7 @@ body,
     -webkit-filter: drop-shadow(rgb(163, 163, 163) -2px 2px 2px);
 }
 
-.laramessage:after,
+.smartmessage:after,
 .mymessage:after {
     content: '';
     position: absolute;
@@ -126,7 +126,7 @@ body,
     -webkit-filter: drop-shadow(rgb(163, 163, 163) -2px 2px 2px);
 }
 
-.laramessage::after {
+.smartmessage::after {
     left: -8px;
     border-width: 8px 8px 8px 0;
     border-color: transparent grey;
@@ -134,7 +134,7 @@ body,
 }
 
 .mymessage,
-.laramessage {
+.smartmessage {
     padding: 10px;
     padding: 4px;
     position: relative;
