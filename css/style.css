@@ -4,7 +4,7 @@ body,
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Ubuntu mono','monospace';
     overflow: hidden;
 }
 
@@ -60,7 +60,7 @@ body,
 .menuname,
 .menustatus {
     height: 45%;
-    color: #FFF;
+    color: blue;
 }
 
 .menuname {
@@ -83,7 +83,7 @@ body,
     height: -o-calc(100% - 51px);
     height: calc(100% - 51px);
     width: 100%;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .laramessage {
@@ -97,7 +97,7 @@ body,
 }
 
 .mymessage {
-    background-color: #DCF8C6;
+    background-color: grey;
     float: right;
     margin-right: 15px;
     margin-bottom: 10px;
@@ -127,7 +127,7 @@ body,
 .laramessage::after {
     left: -8px;
     border-width: 8px 8px 8px 0;
-    border-color: transparent #FFFFFF;
+    border-color: transparent grey;
 }
 
 .mymessage,
@@ -168,7 +168,7 @@ body,
     margin: 5px 10px;
     width: 30px;
     text-align: center;
-    border: 2px solid orange;
+    border: 2px solid white;
     position: absolute;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -255,7 +255,7 @@ body,
 }
 
 .sendicon {
-    background-image: url('../images/icons/send.svg');
+    background-image: url('../images/icons/sendbwt.svg');
     background-size: 38px;
     margin-left: 7px;
     z-index: 5;
