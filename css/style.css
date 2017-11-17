@@ -121,7 +121,7 @@ body,
 .mymessage::after {
     right: -8px;
     border-width: 8px 0 8px 8px;
-    border-color: transparent #DCF8C6;
+    border-color: transparent grey;
 }
 
 .laramessage::after {
