@@ -2,7 +2,7 @@ html, body, .container {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Ubuntumono, sans-serif;
 	overflow: hidden;
 }
 .container {
@@ -52,7 +52,7 @@ html, body, .container {
 }
 .menuname, .menustatus {
 	height: 45%;
-	color: #FFF;
+	color: blue;
 }
 .menuname {
 	padding: 3px 3px 2px 0;
@@ -107,13 +107,13 @@ html, body, .container {
 .mymessage::after {
 	right: -8px;
 	border-width: 8px 0 8px 8px;
-	border-color: transparent #DCF8C6;
+	border-color: transparent grey;
 }
 
 .laramessage::after {
 	left: -8px;
 	border-width: 8px 8px 8px 0;
-	border-color: transparent #FFFFFF;
+	border-color: transparent grey;
 }
 
 .mymessage, .laramessage {
@@ -222,7 +222,7 @@ html, body, .container {
 	background-size:20px;
 }
 .sendicon {
-	background-image: url('../images/icons/send.svg');
+	background-image: url('../images/icons/sendbwt.svg');
 	background-size: 38px;
 	margin-left: 7px;
 	z-index: 5;
