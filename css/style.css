@@ -4,7 +4,7 @@ body,
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-family: 'Ubuntu mono','monospace';
+    font-family: 'lato','Roboto';
     overflow: hidden;
 }
 
@@ -14,7 +14,7 @@ body,
 
 .menubar {
     height: 50px;
-    background-color: #075E54;
+    background-color: fucshia;
 }
 
 .shareicon {
@@ -60,7 +60,7 @@ body,
 .menuname,
 .menustatus {
     height: 45%;
-    color: blue;
+    color: #FFF;
 }
 
 .menuname {
@@ -87,7 +87,7 @@ body,
 }
 
 .laramessage {
-    background-color: #FFF;
+    background-color: white;
     float: left;
     margin-left: 15px;
     margin-bottom: 10px;
@@ -97,7 +97,7 @@ body,
 }
 
 .mymessage {
-    background-color: grey;
+    background-color: transparent grey;
     float: right;
     margin-right: 15px;
     margin-bottom: 10px;
