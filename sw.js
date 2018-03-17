@@ -1,7 +1,7 @@
 var dataCacheName = 'laraData-v1';
 var cacheName = 'lara-v4-cache';
 var filesToCache = [
-	'https://lara.ng/',
+	'https://laraai.herokuapp.com/',
 	'index-2.html',
 	'favicon.ico',
 	'lara.json',
